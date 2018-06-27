@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+  .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin:auto; text-align:center}
+  .speech input {border: 0; width: 240px; display: inline-block; height: 30px; text-align:center}
+  .speech img {float: right; width: 40px; text-align:center }
+#s1,#submit
+
+{
+padding: 10px 20px 11px !important;
+font-size: 15px !important;
+background-color: #f3a105;
+text-shadow: 1px 1px #F36C8C;
+color: #fffdfd;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border: 1px solid #51d2d6;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!-- Search Form -->
+<body background= "{{url_for('static',filename='bckk.jpg')}}">
+<h1 align="center"> <font face="Comic Sans MS" color="black" SIZE="6"> INTELLIGENT COMMUNICATION SYSTEM WITH SIGN LANGUAGE</font></h1>
+
+<h3 align="center"><font face="Comic Sans MS" color="lightblue"> Record your speech to convert it into sign language </font></h3>
+
+<br>
+<br>
+
+<form id="labnol" method="get" action="https://www.google.com/search">
+  <div class="speech" style="text-align:center">
+    <input type="textarea"  name="text" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()"  src="//i.imgur.com/cHidSVu.gif" />
+  <br>
+
+  </div>
+  <span id="arrow" style="left:800px;position:fixed"><i class="fa fa-long-arrow-up" style="font-size:36px;color:red"></i><br>
+    <font face="Comic Sans MS" size="4" style="color:red;"> Click here to record</font></span>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<p align="center"> <font size="5" face="Comic Sans MS" color='#8b0000'>CLICK SUBMIT TO CONVERT TO SIGNS!!</font></p>
+
+    <input type="submit" value="Submit" id="submit" style="margin:auto;display:block" onclick="window.location.href='vids'">
+<br>
+<br>
+
+
+<p align="center"> <font size="5" face="Comic Sans MS" color="yellow">CLICK TO START USING THE GLOVE:</font></p>
+<input type="submit" value="Start" id="s1" style="margin:auto;display:block" onclick="window.location.href='glove'">
+
+
+
+<!-- HTML5 Speech Recognition API -->
+<script>
+
+(function blink() {
+  $('#arrow').fadeOut(500).fadeIn(500, blink);
+})();
+
+
+  function startDictation() {
+
+document.getElementById("arrow").style.display='none'
+
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+
+       $.post("/trial",
+    {
+        ans: e.results[0][0].transcript
+    },
+    function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+    });
+       // recognition.stop();
+       // document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+
+
+
+
+
+</script>
+</body>
+  </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+#s1{
+padding: 10px 20px 11px !important;
+font-size: 15px !important;
+background-color: #1d8df3;
+text-shadow: 1px 1px #F36C8C;
+color: #fffdfd;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border: 1px solid #51d2d6;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+            </style>
+
+    <meta charset="UTF-8">
+    <title>Glove</title>
+</head>
+<body background= "{{url_for('static',filename='bgr.png')}}">
+
+{%for value in param %}
+<font color="white" size="10"> {{value}}&nbsp;</font>
+{%endfor%}
+<form action="/" method="post" >
+    <input type="submit" value="Go Back" id="s1" style="background-color:skyblue;margin:auto;display:block" >
+
+</form>
+
+
+</body>
+</html>

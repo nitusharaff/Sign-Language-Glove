@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio to video</title>
+
+        <style>
+#s1{
+padding: 10px 20px 11px !important;
+font-size: 15px !important;
+background-color: #1d8df3;
+text-shadow: 1px 1px #F36C8C;
+color: #fffdfd;
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border: 1px solid #51d2d6;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+            </style>
+</head>
+<body background= "{{url_for('static',filename='bgr.png')}}">
+
+<div style="text-align:center">
+{%for value in params %}
+<video width="400" controls autoplay loop>
+    <source src="{{ value }}" type="video/mp4">
+</video>
+{%endfor%}
+
+    <div style="background-color:grey">
+<p> <font size="10">  {{words}}    </font> </p>
+    </div>
+</div>
+
+<form action="/" method="post" >
+    <input type="submit" value="Go Back" id="s1" style=";margin:auto;display:block" >
+
+</form>
+
+
+</body>
+</html>
