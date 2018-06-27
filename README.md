@@ -33,9 +33,10 @@ The figure above shows the main page of the website when the user opens the link
 <strong> 1) DATA COLLECTION </strong>
 In order to collect the sensors data and build a database, we use PLX-DAQ software. Data was collected demonstrating all alphabets and most frequently used set of words. The entire dataset has around 13000 values which are then being trained.
 
-<strong> 1) DATA MODELING : MACHINE LEARNING </strong>
-After obtaining the dataset, we train the model for type of alphabets and words in ASL using different algorithms. In order to evaluate and compare the performance, we choose four different classifiers for the learning process. We have also chosen the Python Scikit-learn platform to perform all the Machine Leraning modeling for our system.
-The classifiers used were: 1. Support Vector Machines 2. Decision Trees 3. Random Forest 4.Naive Bayes 5. Multilayer Perceptron
+<strong> 3) DATA MODELING : MACHINE LEARNING </strong>
+After obtaining the dataset, we train the model for type of alphabets and words in ASL using different algorithms. In order to evaluate and compare the performance, we choose four different classifiers for the learning process. We have also chosen the Python Scikit-learn platform to perform all the Machine Leraning modeling for our system.</br>
+The classifiers used were: </br>
+1. Support Vector Machines 2. Decision Trees 3. Random Forest 4.Naive Bayes 5. Multilayer Perceptron
 
 Accuracy of the classifiers are shown below:</br>
 
@@ -54,7 +55,7 @@ When the user speaks after clicking the record button in the website, a speech-t
 It must be noted that not all values of English language have a sign corresponding to it as per the American Sign Language Standard. That is, when people communicate through sign language, they do not need to frame entire sentences with correct English Grammar.
 
 
-FILES:
+<strong>FILES:</strong>
 
 Static: videos used in the database </br>
 Templates: html websites templates</br>
