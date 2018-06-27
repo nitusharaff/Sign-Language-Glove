@@ -1,0 +1,16 @@
+SOFTWARES REQUIRED:
+
+Hardware Device:
+Arduino IDE 1.6.1
+PLX-DAQ
+
+
+Website Application(software):
+PyCharm Community Edition 2016.3.2
+Flask Framework ver 0.11.1
+Data Analysis python 2.7
+Pandas Version: 0.16.0 s
+numpy 1.6
+scipy
+sklearn
+MySQLdb
