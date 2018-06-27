@@ -41,13 +41,12 @@ Accuracy of the classifiers are shown below:</br>
 
 ![Alt text](/screenshots/accuracy.png)
 
-
-
 <h3>AUDIO TO SIGN LANGUAGE </h3>
 
 When the user speaks after clicking the record button in the website, a speech-to-text API is called and the text appears on the text box. These values are then sent for conversion into sign languages.The speech input recognized as text is mapped to audio files from the database and then displayed. 
 
 ![Alt text](/screenshots/gifs.png)
+
 
 It must be noted that not all values of English language have a sign corresponding to it as per the American Sign Language Standard. That is, when people communicate through sign language, they do not need to frame entire sentences with correct English Grammar.
 
