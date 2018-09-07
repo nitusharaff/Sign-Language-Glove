@@ -52,7 +52,7 @@ When the user speaks after clicking the record button in the website, a speech-t
 ![Alt text](/screenshot/gifs.png)
 
 
-It must be noted that not all values of English language have a sign corresponding to it as per the American Sign Language Standard. That is, when people communicate through sign language, they do not need to frame entire sentences with correct English Grammar.
+It must be noted that not all values of English language have a sign corresponding to it as per the American Sign Language Standard. That is, when people communicate through sign language, they do not need to frame entire sentences with correct English Grammar
 
 
 <strong>FILES:</strong>
